@@ -2,15 +2,14 @@
 
 //antidisestablishmentarianism is the longest reasonable word x~2 for margin
 #define MAXLEN 64
-#define NO 0
-#define YES 1
+
 // count digits, white space, others
 int main() {
   int wordLengths[MAXLEN];
   for (int i = 0; i < MAXLEN; i++)
     wordLengths[i] = 0;
 
-  int c, inWord;
+  int c;
   int length = 0;
 
   while ((c = getchar()) != EOF) {
