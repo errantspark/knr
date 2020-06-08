@@ -24,6 +24,16 @@ int main() {
       length++;
   }
 
+  int longest = 0;
   for (int i = 0; i < MAXLEN; i++)
-    printf("%d ", wordLengths[i]);
+    if (wordLengths[i]) 
+      longest = i;
+
+  print("Word Length Histogram\n")
+  for (int i = 0; i < longest; i++){
+    printf("%d ", i+1);
+    for (int j = 0; j < wordLengths[i]; j++)
+      print("#");
+    print("\n");
+  }
 }
