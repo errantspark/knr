@@ -27,13 +27,13 @@ int main() {
   int longest = 0;
   for (int i = 0; i < MAXLEN; i++)
     if (wordLengths[i]) 
-      longest = i;
+      longest = i+1;
 
-  print("Word Length Histogram\n")
+  printf("Word Length Histogram\n");
   for (int i = 0; i < longest; i++){
-    printf("%d ", i+1);
+    printf("%2d ", i+1);
     for (int j = 0; j < wordLengths[i]; j++)
-      print("#");
-    print("\n");
+      printf("#");
+    printf("\n");
   }
 }
